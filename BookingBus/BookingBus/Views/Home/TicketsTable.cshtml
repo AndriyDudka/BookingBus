@@ -1,0 +1,35 @@
+﻿@model List<BookingBus.Models.TicketModel>
+@{
+    ViewBag.Title = "TicketsTable";
+}
+
+<h2>TicketsTable</h2>
+
+<div>
+    @Html.ActionLink("Назад", "Index")
+</div>
+
+<br />
+
+<table border="2">
+    <tr>
+        <td>Звідки</td>
+        <td>Куди</td>
+        <td>Час відправлення</td>
+        <td>Кількість вільних місць</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FromCity</td>
+            <td>@item.ToCity</td>
+            <td>@item.Time</td>
+            <td>
+                <span id="PlacesCount">
+                    @item.PlacesCount
+                </span>
+                <input type="button" class="btn btn-info pull-right" value="Придбати" id="ButtonBuy"/>
+            </td>
+        </tr>
+    }
+</table>

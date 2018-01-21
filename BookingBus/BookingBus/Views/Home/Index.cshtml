@@ -2,7 +2,47 @@
     ViewBag.Title = "Home Page";
 }
 
-Популярні напрямки: 
+<div class="popular">
+    <b>Популярні напрямки:</b>
+    <input type="button" id="Uzhhorod" class="btn btn-default" value="Ужгород - Мукачево">
+    <input type="button" id="Mukachevo" class="btn btn-default" value="Мукачево - Ужгород">
+    <input type="button" id="Mouse" class="btn btn-default" value="Крисовці - Пацканьово">
+    <input type="button" id="UzhNU" class="btn btn-default" value="УжНУ - Армія">
+</div>
 
-<input type="button" class="btn btn-default" value="Мукачево - Ужгород">
-<input type="button" class="btn btn-default" value="Ужгород - Мукачево">
+
+
+@using (Html.BeginForm("TicketsTable", "Home"))
+{
+    <div class="form-group-wrapper">
+        <div class="form-group">
+            <label for="from">Звідки</label>
+            <input type="text" id="from" class="form-control" placeholder="Звідки">
+            <a href="#" id="Lviv">Львів</a> -
+            <a href="#" id="Uzhhorod1">Ужгород</a> -
+            <a href="#" id="Mukachevo1">Мукачево</a> -
+            <a href="#" id="Kiev">Київ</a> -
+            <a href="#" id="Odessa">Одеса</a>
+        </div>
+        <div class="form-group">
+            <label for="to">Куди</label>
+            <input type="text" id="to" class="form-control" placeholder="Куди">
+            <a href="#" id="Lviv2">Львів</a> -
+            <a href="#" id="Uzhhorod2">Ужгород</a> -
+            <a href="#" id="Mukachevo2">Мукачево</a> -
+            <a href="#" id="Kiev2">Київ</a> -
+            <a href="#" id="Odessa2">Одеса</a>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="date">Дата відправлення</label>
+        <input type="date" id="date" class="form-control" placeholder="Дата відправлення">
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-default" id="search" value="Пошук Автобусів" />
+    </div>
+}
+    
+
