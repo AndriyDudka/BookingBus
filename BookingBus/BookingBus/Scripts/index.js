@@ -74,12 +74,15 @@
         $('#to').val('Одеса');
     });
 
-    $('#ButtonBuy').on('click', function () {
-        var count = $('#PlacesCount').html().trim();
+    $('.ButtonBuy').on('click', function (e) {
+        let target = e.target,
+            parent = target.parentNode;
+
+        var count = parent.firstChild.nextElementSibling.innerText;
         var number = parseInt(count) - 1;
 
         if (number >= 0) {
-            $('#PlacesCount').html(number);
+            parent.firstChild.nextElementSibling.innerText = number;
         } else {
             alert("Вибачте, вільних місць не залишилось більше. Хіба якщо зайцем проскочите.");
         }
