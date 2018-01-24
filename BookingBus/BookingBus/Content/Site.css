@@ -1,4 +1,8 @@
 ﻿body {
+    background-image: url("../Pictures/Bus.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -7,6 +11,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: 130px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -24,7 +29,7 @@ textarea {
 }
 
 .popular{
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
 }
 
@@ -39,4 +44,9 @@ td{
 
 table{
     font-size: 20px;
+    background-color: white;
+}
+
+.myclass{
+    margin-right:375px;
 }

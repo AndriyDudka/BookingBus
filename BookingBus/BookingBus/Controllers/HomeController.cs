@@ -22,9 +22,9 @@ namespace BookingBus.Controllers
         }
 
         [HttpPost]
-        public ActionResult TicketsTable()
+        public ActionResult TicketsTable(string from, string to, string date)
         {
-            var tickets = _ticketService.GetTickets();
+            var tickets = _ticketService.GetTickets(from, to, date);
             return View(tickets);
         }
     }

@@ -76,7 +76,13 @@
 
     $('#ButtonBuy').on('click', function () {
         var count = $('#PlacesCount').html().trim();
-        $('#PlacesCount').html(parseInt(count) - 1);
+        var number = parseInt(count) - 1;
+
+        if (number >= 0) {
+            $('#PlacesCount').html(number);
+        } else {
+            alert("Вибачте, вільних місць не залишилось більше. Хіба якщо зайцем проскочите.");
+        }
     });
 
     function todayFormat() {
